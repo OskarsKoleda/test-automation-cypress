@@ -1,0 +1,25 @@
+{
+    "fileServerFolder": ".",
+    "fixturesFolder": "cypress/fixtures",
+    "integrationFolder": "cypress/integration",
+    "modifyObstructiveCode": false,
+    "experimentalStudio": true,
+    "pluginsFile": "cypress/plugins/index",
+    "supportFile": "cypress/support/index.ts",
+    "video": false,
+    "videosFolder": "./dist/cypress/videos",
+    "screenshotsFolder": "./dist/cypress/screenshots",
+    "chromeWebSecurity": false,
+    "watchForFileChanges": false,
+    "reporter": "junit",
+    "reporterOptions": {
+      "mochaFile": "./dist/cypress/TEST-report-[hash].xml"
+    },
+    "retries": 0,
+    "defaultCommandTimeout": 10000,
+    "requestTimeout": 10000,
+    "viewportWidth": 1920,
+    "viewportHeight": 1080,
+    "env": {
+    }
+  }

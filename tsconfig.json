@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["es5", "dom"],
+    "types": ["cypress", "node"],
+    "skipLibCheck": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ]
+  },
+  "moduleResolution": "node",
+  "no_proxy": "localhost,127.0.0.1",
+  "include": [
+    "**/*.ts",
+    "../node_modules/cypress"
+, "cypress/support/index.ts"  ]
+}
