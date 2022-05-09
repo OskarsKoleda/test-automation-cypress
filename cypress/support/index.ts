@@ -14,7 +14,8 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import './commands.ts'
+import './authz.ts'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
