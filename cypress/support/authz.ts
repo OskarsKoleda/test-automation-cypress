@@ -5,7 +5,7 @@ declare namespace Cypress {
 }
 
 Cypress.Commands.add('login', (username, password) => {
-    cy.get('#username').type(Cypress.env('usar'));
-    cy.get('#password').type(Cypress.env('wrongPazz'));
+    cy.get('#username').type(username);
+    cy.get('#password').type(password, { log: false });
     cy.contains('Login').click();
 })

@@ -19,7 +19,5 @@
     "defaultCommandTimeout": 10000,
     "requestTimeout": 10000,
     "viewportWidth": 1920,
-    "viewportHeight": 1080,
-    "env": {
-    }
+    "viewportHeight": 1080
   }

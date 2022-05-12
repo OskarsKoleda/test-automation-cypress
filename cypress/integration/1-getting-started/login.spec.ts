@@ -1,16 +1,19 @@
+beforeEach(function () {
+    cy.visit(Cypress.env('misc').baseUrl);
+});
+
 describe('login test', () => {
 
     it('should display error message in case of wrong password', () => {
-        cy.visit(Cypress.env('baseUrl'));
-        cy.login(Cypress.env('usar'), Cypress.env('wrongPazz'));
+        cy.login(Cypress.env('user').usar, Cypress.env('user').wrongPazz);
         cy.get('.errors').last().should((elem) => {
             expect(elem.text()).to.equal('Invalid credentials.');
         });
     });
 
     it('should contain attribute with user name on homepage', () => {
-        cy.visit(Cypress.env('baseUrl'));
-        cy.login(Cypress.env('usar'), Cypress.env('pazz'));
+        cy.login(Cypress.env('user').usar, Cypress.env('user').pazz);
+
         cy.get('.bp-tooltip')
             .first()
             .should('have.attr', 'data-bp-tooltip', 'Oskars Koleda');
@@ -18,8 +21,8 @@ describe('login test', () => {
     });
 
     it('should contain attribute with user name on home page and on logout should contain logout success message', () => {
-        cy.visit(Cypress.env('baseUrl'));
-        cy.login(Cypress.env('usar'), Cypress.env('pazz'));
+        cy.login(Cypress.env('user').usar, Cypress.env('user').pazz);
+
         cy.get('.bp-tooltip')
             .first()
             .should('have.attr', 'data-bp-tooltip', 'Oskars Koleda');
