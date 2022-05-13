@@ -16,11 +16,16 @@ describe('billboard page tests', () => {
         cy.get('.products li mark')
             .then(listElements => {
                 mainTopics = listElements.toArray().length;
-                for (let index = 0; index < mainTopics; index++) {
-                    // just visit
-                    cy.get('.products li mark').eq(index).click();
+                cy.get('.products li mark')
+                .each((elem) => {
+                    cy.contains(elem.text()).click();
                     cy.go('back');
-                };
+                });
+                // cy.get('.products li mark')
+                // .each((elem, index) => {
+                //     cy.get('.products li mark').eq(index).click();
+                //     cy.go('back');
+                // });
             });
     });
 
