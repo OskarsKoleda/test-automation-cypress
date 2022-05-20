@@ -23,12 +23,7 @@ describe('billboard page tests', () => {
                     if (amountOfPages === 1) {
                         cy.get('.product-details').should('have.length', topicSize);
                     } else {
-                        let index = 1;
-                        do {
-                            cy.get('.product-details').should('have.length', Cypress.env('misc').billboardTopicPageSize);
-                            cy.get('.next').click();
-                            index++;
-                        } while (index < amountOfPages);
+                        cy.navigateToLastPage(amountOfPages);
                     };
 
                     // assert last page content
